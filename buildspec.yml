@@ -11,6 +11,7 @@ phases:
       
      
 artifacts:
+  type: zip
   files:
     - bin/*
     - node_modules/**/*
