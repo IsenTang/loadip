@@ -1,14 +1,14 @@
 version: 0.2
 
 phases:
-  install:
-    commands:
-      - npm install mocha
-      - npm install 
+  # install:
+  #   commands:
+  #     - npm install mocha
+  #     - npm install 
   pre_build:
     commands:
-      - echo Test 
-      - mocha
+      # - echo Test 
+      # - mocha
       - echo Logging in to Amazon ECR...
       - aws --version
       - eval $( aws ecr get-login --no-include-email --region us-east-1 )
