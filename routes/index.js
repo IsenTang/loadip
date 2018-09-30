@@ -8,7 +8,7 @@ router.get('/', async (ctx, next) => {
   const address = await checkDocker();
 
   await ctx.render('index', {
-    title: `${address}   test cicd`
+    title: `${address}   test cicd11111111111`
   })
 })
 
