@@ -3,7 +3,7 @@ version: 0.2
 phases:
   install:
     commands:
-      - npm install -g mocha
+      - npm install mocha
       - npm install 
   pre_build:
     commands:
@@ -33,5 +33,5 @@ phases:
      
 artifacts:
   files:
-    - imagedefinitions.json
+    - imagedefinitions.json 
 
