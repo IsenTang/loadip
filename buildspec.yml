@@ -1,0 +1,27 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - npm install -g mocha
+  pre_build:
+    commands:
+      - npm install 
+      - mocha
+      
+     
+artifacts:
+  files:
+    - bin/*
+    - node_modules/**/*
+    - public/**/*
+    - routes/
+    - test/*
+    - views/*
+    - .dockerignore
+    - .gitignore
+    - Dockerfile
+    - package-lock.json
+    - package.json
+    - app.js
+
