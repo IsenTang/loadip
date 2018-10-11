@@ -7,8 +7,10 @@ router.get('/', async (ctx, next) => {
 
   const address = await checkDocker();
 
+  console.log(ctx.request.header);
+  
   await ctx.render('index', {
-    title: `${address}   test cicd test deployment blue/green & max`
+    title: ` test cicd test deployment blue/green & max`
   })
 })
 
