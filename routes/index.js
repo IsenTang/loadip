@@ -7,10 +7,15 @@ router.get('/', async (ctx, next) => {
 
   const address = await checkDocker();
 
-  console.log(ctx.request.header);
+
+  if(ctx.request.header['user-agen']!=='ELB-HealthChecker/2.0'){
+    console.log(ctx.request.header);
+  }
+  
+
   
   await ctx.render('index', {
-    title: ` test cicd test deployment blue/green & max`
+    title: JSON.stringify(ctx.request.header)
   })
 })
 
@@ -23,6 +28,7 @@ router.get('/json', async (ctx, next) => {
     title: 'koa2 json'
   }
 })
+
 
 checkDocker = () => {
   return new Promise((resolve, reject) => {
