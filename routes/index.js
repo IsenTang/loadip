@@ -12,7 +12,7 @@ router.get('/', async (ctx, next) => {
     console.log(ctx.request.header);
   }
   
-
+  console.log('test');
   
   await ctx.render('index', {
     title: JSON.stringify(ctx.request.header)
