@@ -6,7 +6,7 @@ phases:
       - echo Logging in to Amazon ECR...
       - aws --version
       - eval $( aws ecr get-login --no-include-email --region us-east-1 )
-      - REPOSITORY_URI=774061314809.dkr.ecr.us-east-1.amazonaws.com/loadbalance
+      - REPOSITORY_URI=908117773420.dkr.ecr.us-east-1.amazonaws.com/loadbalance
       - COMMIT_HASH=$(echo $CODEBUILD_RESOLVED_SOURCE_VERSION | cut -c 1-7)
       - IMAGE_TAG=${COMMIT_HASH:=latest}
   build:
