@@ -11,7 +11,7 @@ var userSchema = new Schema({
     remark:{type:String,default:""}
 });
 
-var formatCreatedAt = userSchema.virtual('formatCreatedAt');
+var formatCreatedAt = userSchema.virtual('formatCreatedAt')
 formatCreatedAt.get(function () {
   return new moment(this.createdAt).format("YYYY-MM-DD HH:mm:ss:SSS");
 });
