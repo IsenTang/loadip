@@ -10,7 +10,7 @@ const index = require('./routes/index')
 const users = require('./routes/users')
 
 // error handler
-onerror(app)   
+onerror(app)     
  
 // middlewares
 app.use(bodyparser({
